@@ -1,0 +1,67 @@
+<%= form_with(model: declaration, local: true) do |form| %>
+  <% if declaration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(declaration.errors.count, "error") %> prohibited this declaration from being saved:</h2>
+
+      <ul>
+      <% declaration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ip_address %>
+    <%= form.text_field :ip_address, id: :declaration_ip_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :declaration_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_name %>
+    <%= form.text_field :country_name, id: :declaration_country_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_code %>
+    <%= form.text_field :country_code, id: :declaration_country_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :declaration_latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :declaration_longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_zone %>
+    <%= form.text_field :time_zone, id: :declaration_time_zone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :declaration_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rawemotiondata %>
+    <%= form.text_field :rawemotiondata, id: :declaration_rawemotiondata %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :declaration_email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

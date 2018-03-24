@@ -1,0 +1,13 @@
+$icon-size: 20px;
+.we-pm-icon {
+ background-image: asset-url('SNice.svg') !important;
+ background-size: 100% !important;
+ width: $icon-size !important;
+ height: $icon-size !important;
+ margin-top: -$icon-size !important;
+ margin-left: -$icon-size / 2 !important;
+ border-radius: 20px !important;
+}
+.list-countries h1{
+  color: #FF0000;
+}

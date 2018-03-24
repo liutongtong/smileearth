@@ -1,0 +1,27 @@
+
+  <script type="text/javascript">
+    window.locations = [
+      <% Declaration.limit(50).each do |declaration| %>
+        [<%= declaration.latitude %>, <%= declaration.longitude %>],
+      <% end %>
+    ]
+  </script>
+
+  <div class="list-countries">
+    <h1>Smiley Happy Countries</h1>
+    <div>
+      <ol>
+        <% @countries.each do |country| %>
+            <li><%= country %>（<%= rand(99) %>%）</li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+
+
+  <div id="earth_div"></div>
+  <div id="nav">
+        <div class="row">
+          <%= link_to "I AM HAPPY", 'javascript:void(0)', id: 'create_declaration' %>
+       </div>
+  </div>
