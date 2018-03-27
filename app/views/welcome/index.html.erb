@@ -1,7 +1,7 @@
 
   <script type="text/javascript">
     window.locations = [
-      <% Declaration.limit(50).each do |declaration| %>
+      <% Declaration.all.each do |declaration| %>
         [<%= declaration.latitude %>, <%= declaration.longitude %>],
       <% end %>
     ]
@@ -23,5 +23,6 @@
   <div id="nav">
         <div class="row">
           <%= link_to "I AM HAPPY", 'javascript:void(0)', id: 'create_declaration' %>
+
        </div>
   </div>
