@@ -31,7 +31,7 @@
   position: absolute !important;
 }
 .row{
-  width: 320px;
+  /*width: 320px;*/
   margin-left: auto;
   margin-right: auto;
   text-align: center;
