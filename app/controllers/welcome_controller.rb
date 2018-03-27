@@ -6,8 +6,8 @@ class WelcomeController < ApplicationController
   def add
     if Rails.env.development?
       # Fake IP address in development because otherwise 127.0.0.1
-      ip_address = Faker::Internet.ip_v4_address
-    else
+     # ip_address = Faker::Internet.ip_v4_address
+   # else
       ip_address = request.remote_ip
     end
 
